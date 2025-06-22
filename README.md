@@ -1,7 +1,3 @@
-Sure — here is the complete and final `README.md` written in clean, GitHub-appropriate markdown format, assuming the `.exe` is already included and **no dependencies** are needed:
-
----
-
 ```markdown
 # YARA STANDALONE - Webshell Scanner
 
@@ -103,9 +99,4 @@ pyinstaller --onefile modules/yara_standalone.py --name yara_standalone
 
 This project is open-source under the MIT License. YARA rules are sourced from trusted public repositories including THOR, Velociraptor, and php-malware-finder. You are free to extend or adapt the rules for your own detection needs.
 
-```
-
----
-
-Let me know if you'd like this embedded directly in your ZIP or repo.
 ```
