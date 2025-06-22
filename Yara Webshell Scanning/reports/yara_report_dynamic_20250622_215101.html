@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YARA Detection Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            background-color: #f4f6f9;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #22313f;
+        }
+        .header img {
+            vertical-align: middle;
+            width: 30px;
+            margin-right: 10px;
+        }
+        .filter-container {
+            text-align: center;
+            margin: 10px 0 30px 0;
+        }
+        .filter-container input {
+            width: 70%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 22px;
+            color: #22313f;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+        .file-section {
+            padding: 0 30px 30px 30px;
+        }
+        .file-section h2 {
+            font-size: 20px;
+            color: #0a2940;
+            margin-top: 40px;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        table {
+            min-width: 1000px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            font-size: 16px;
+            border-bottom: 2px solid #ccc;
+            white-space: nowrap;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #fff;
+            text-transform: capitalize;
+        }
+        td a {
+            color: #0645AD;
+            word-break: break-all;
+        }
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #eee;
+            padding: 15px;
+            background-color: #2c3e50;
+        }
+        .footer a {
+            color: #a9c6f2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛡️ YARA Detection Report</h1>
+    </div>
+    <div class="filter-container">
+        <input type="text" id="filterInput" placeholder="Filter by rule name, file, or metadata...">
+    </div>
+
+    <div class="section-title">Matched Rules</div>
+
+    
+    <div class="file-section">
+        <h2>Scanned File: vulnerable_page_1.html</h2>
+        <div class="table-wrapper">
+			<table>
+				
+				<thead>
+					<tr>
+						<th>Rule</th>
+						<th>YARA File</th>
+						
+						<th>author</th>
+						
+						<th>date</th>
+						
+						<th>description</th>
+						
+						<th>family</th>
+						
+						<th>filetype</th>
+						
+						<th>hash</th>
+						
+						<th>id</th>
+						
+						<th>license</th>
+						
+						<th>modified</th>
+						
+						<th>reference</th>
+						
+						<th>score</th>
+						
+						<th>File Hash (SHA-256)</th> <!-- ✅ Moved to the end -->
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr>
+						<td>suspiciousFunctionality</td>
+						<td>extended.webshell_detection.yar</td>
+						
+						<td>NSA Cybersecurity</td>
+						
+						<td></td>
+						
+						<td>Artifacts common to web shells and somewhat rare in benign files</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>obfuscatedFunctionality</td>
+						<td>extended.webshell_detection.yar</td>
+						
+						<td>NSA Cybersecurity</td>
+						
+						<td></td>
+						
+						<td>Obfuscation sometimes hides malicious functionality</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>possibleIndicator</td>
+						<td>extended.webshell_detection.yar</td>
+						
+						<td>NSA Cybersecurity</td>
+						
+						<td></td>
+						
+						<td>Artifacts common to web shells and less common in benign files</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>generic_jsp_shell</td>
+						<td>generic_jsp_shell.yar</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>Generic JSP Webshell with exec()</td>
+						
+						<td>JSP.Generic</td>
+						
+						<td>JSP</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>WEBSHELL_PHP_Generic_Eval</td>
+						<td>gen_webshells.yar</td>
+						
+						<td>Arnim Rupp (https://github.com/ruppde)</td>
+						
+						<td>2021/01/07</td>
+						
+						<td>Generic PHP webshell which uses any eval/exec function in the same line with user input</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>dd5d8a9b4bb406e0b8f868165a1714fe54ffb18e621582210f96f6e5ae850b33</td>
+						
+						<td>79cfbd88-f6f7-5cba-a325-0a99962139ca</td>
+						
+						<td>Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE</td>
+						
+						<td>2023-04-05</td>
+						
+						<td>Internal Research</td>
+						
+						<td>75</td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>obfuscated_eval</td>
+						<td>obfuscated_eval.yar</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>Obfuscated eval via variable concatenation</td>
+						
+						<td>PHP.Obfuscated</td>
+						
+						<td>PHP</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>pbot_backdoor</td>
+						<td>pbot_backdoor.yar</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>PBot style system backdoor</td>
+						
+						<td>PHP.PBot</td>
+						
+						<td>PHP</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+        </div>
+    </div>
+    
+    <div class="file-section">
+        <h2>Scanned File: vulnerable_page_2.html</h2>
+        <div class="table-wrapper">
+			<table>
+				
+				<thead>
+					<tr>
+						<th>Rule</th>
+						<th>YARA File</th>
+						
+						<th>author</th>
+						
+						<th>date</th>
+						
+						<th>description</th>
+						
+						<th>family</th>
+						
+						<th>filetype</th>
+						
+						<th>hash</th>
+						
+						<th>id</th>
+						
+						<th>license</th>
+						
+						<th>modified</th>
+						
+						<th>reference</th>
+						
+						<th>score</th>
+						
+						<th>File Hash (SHA-256)</th> <!-- ✅ Moved to the end -->
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr>
+						<td>suspiciousFunctionality</td>
+						<td>extended.webshell_detection.yar</td>
+						
+						<td>NSA Cybersecurity</td>
+						
+						<td></td>
+						
+						<td>Artifacts common to web shells and somewhat rare in benign files</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>obfuscatedFunctionality</td>
+						<td>extended.webshell_detection.yar</td>
+						
+						<td>NSA Cybersecurity</td>
+						
+						<td></td>
+						
+						<td>Obfuscation sometimes hides malicious functionality</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>possibleIndicator</td>
+						<td>extended.webshell_detection.yar</td>
+						
+						<td>NSA Cybersecurity</td>
+						
+						<td></td>
+						
+						<td>Artifacts common to web shells and less common in benign files</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>generic_jsp_shell</td>
+						<td>generic_jsp_shell.yar</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>Generic JSP Webshell with exec()</td>
+						
+						<td>JSP.Generic</td>
+						
+						<td>JSP</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>WEBSHELL_PHP_Generic_Eval</td>
+						<td>gen_webshells.yar</td>
+						
+						<td>Arnim Rupp (https://github.com/ruppde)</td>
+						
+						<td>2021/01/07</td>
+						
+						<td>Generic PHP webshell which uses any eval/exec function in the same line with user input</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>dd5d8a9b4bb406e0b8f868165a1714fe54ffb18e621582210f96f6e5ae850b33</td>
+						
+						<td>79cfbd88-f6f7-5cba-a325-0a99962139ca</td>
+						
+						<td>Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE</td>
+						
+						<td>2023-04-05</td>
+						
+						<td>Internal Research</td>
+						
+						<td>75</td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>obfuscated_eval</td>
+						<td>obfuscated_eval.yar</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>Obfuscated eval via variable concatenation</td>
+						
+						<td>PHP.Obfuscated</td>
+						
+						<td>PHP</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>pbot_backdoor</td>
+						<td>pbot_backdoor.yar</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>PBot style system backdoor</td>
+						
+						<td>PHP.PBot</td>
+						
+						<td>PHP</td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td></td>
+						
+						<td>
+							<a href="https://ekky19.github.io/osint/?ip=21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7" target="_blank">21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7</a>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+        Report generated by WebShell Analyzer<br>
+        Developed by <a href="https://www.linkedin.com/in/ekremozdemir19/" target="_blank">Ekrem O.</a>
+    </div>
+
+    <script>
+        document.getElementById('filterInput').addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                row.style.display = [...row.cells].some(td => td.textContent.toLowerCase().includes(filter)) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

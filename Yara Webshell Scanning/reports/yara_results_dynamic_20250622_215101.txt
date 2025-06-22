@@ -1,0 +1,110 @@
+================================================================================
+Scanned File: vulnerable_page_1.html
+  Rule: suspiciousFunctionality
+  YARA File: extended.webshell_detection.yar
+    author: NSA Cybersecurity
+    description: Artifacts common to web shells and somewhat rare in benign files
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: obfuscatedFunctionality
+  YARA File: extended.webshell_detection.yar
+    author: NSA Cybersecurity
+    description: Obfuscation sometimes hides malicious functionality
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: possibleIndicator
+  YARA File: extended.webshell_detection.yar
+    author: NSA Cybersecurity
+    description: Artifacts common to web shells and less common in benign files
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: generic_jsp_shell
+  YARA File: generic_jsp_shell.yar
+    description: Generic JSP Webshell with exec()
+    family: JSP.Generic
+    filetype: JSP
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: WEBSHELL_PHP_Generic_Eval
+  YARA File: gen_webshells.yar
+    description: Generic PHP webshell which uses any eval/exec function in the same line with user input
+    license: Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE
+    author: Arnim Rupp (https://github.com/ruppde)
+    reference: Internal Research
+    score: 75
+    date: 2021/01/07
+    modified: 2023-04-05
+    hash: dd5d8a9b4bb406e0b8f868165a1714fe54ffb18e621582210f96f6e5ae850b33
+    id: 79cfbd88-f6f7-5cba-a325-0a99962139ca
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: obfuscated_eval
+  YARA File: obfuscated_eval.yar
+    description: Obfuscated eval via variable concatenation
+    family: PHP.Obfuscated
+    filetype: PHP
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: pbot_backdoor
+  YARA File: pbot_backdoor.yar
+    description: PBot style system backdoor
+    family: PHP.PBot
+    filetype: PHP
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+
+================================================================================
+Scanned File: vulnerable_page_2.html
+  Rule: suspiciousFunctionality
+  YARA File: extended.webshell_detection.yar
+    author: NSA Cybersecurity
+    description: Artifacts common to web shells and somewhat rare in benign files
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: obfuscatedFunctionality
+  YARA File: extended.webshell_detection.yar
+    author: NSA Cybersecurity
+    description: Obfuscation sometimes hides malicious functionality
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: possibleIndicator
+  YARA File: extended.webshell_detection.yar
+    author: NSA Cybersecurity
+    description: Artifacts common to web shells and less common in benign files
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: generic_jsp_shell
+  YARA File: generic_jsp_shell.yar
+    description: Generic JSP Webshell with exec()
+    family: JSP.Generic
+    filetype: JSP
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: WEBSHELL_PHP_Generic_Eval
+  YARA File: gen_webshells.yar
+    description: Generic PHP webshell which uses any eval/exec function in the same line with user input
+    license: Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE
+    author: Arnim Rupp (https://github.com/ruppde)
+    reference: Internal Research
+    score: 75
+    date: 2021/01/07
+    modified: 2023-04-05
+    hash: dd5d8a9b4bb406e0b8f868165a1714fe54ffb18e621582210f96f6e5ae850b33
+    id: 79cfbd88-f6f7-5cba-a325-0a99962139ca
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: obfuscated_eval
+  YARA File: obfuscated_eval.yar
+    description: Obfuscated eval via variable concatenation
+    family: PHP.Obfuscated
+    filetype: PHP
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+  Rule: pbot_backdoor
+  YARA File: pbot_backdoor.yar
+    description: PBot style system backdoor
+    family: PHP.PBot
+    filetype: PHP
+  SHA-256: 21c7f2b6c1d90c3f7d4e2795971fddaba55e68c02aa65670bde8d9d3ab727dc7
+
+
