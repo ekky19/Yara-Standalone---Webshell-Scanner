@@ -54,40 +54,6 @@ The tool generates the following reports in the `reports/` folder:
 
 ---
 
-## Optional: Running from Source
-
-If you'd prefer to run the tool using Python:
-
-```bash
-cd modules
-python 
----
-
-## Rule Management
-
-You can customize detection logic by modifying the `.yar` rule files in:  
-`modules/yara_webshell_rules/`
-
-- Add your own `.yar` files to extend detection.
-- Remove or update existing rules as needed.
-
-> No rebuild is required — the scanner will dynamically load all `.yar` files on each run.
-
----
-
-## Output
-
-The tool generates the following reports in the `reports/` folder:
-
-- **HTML Report** - A styled, grouped summary of rule matches with metadata.
-- **Text Report** - A plain-text version for terminal review or log archiving.
-
-Reports are timestamped and do not overwrite previous results.
-
----
-
-## Optional: Running from Source
-
-If you'd prefer to run the tool using Python:
-python yara_scanner.py
+## License
+This project is licensed under the MIT License.
 
