@@ -30,8 +30,7 @@ YARA_STANDALONE/
 ├── template/                 # HTML report templates
 ├── reports/                  # Output reports (auto-generated)
 └── run_yara_scan.bat         # Launcher script
-
-
+```
 ---
 
 ## Rule Management
