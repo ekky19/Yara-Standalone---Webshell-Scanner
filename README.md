@@ -19,7 +19,7 @@ This tool is intended for SOC analysts, incident responders, and forensic invest
 ---
 
 ## Project Structure
-
+```text
 YARA_STANDALONE/
 ├── input/
 │   └── webroot/              # Files to scan go here
