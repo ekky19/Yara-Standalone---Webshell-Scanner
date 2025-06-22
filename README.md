@@ -1,9 +1,9 @@
-```markdown
+````markdown
 # YARA STANDALONE - Webshell Scanner
 
 **YARA STANDALONE** is a lightweight, offline tool for scanning webroot folders to detect webshells and other suspicious files using YARA rules.
 
-This tool is built for SOC analysts, incident responders, and forensic investigators who need to analyze `.php`, `.asp`, `.html`, `.jsp`, or similar files for signs of compromise.
+This tool is intended for SOC analysts, incident responders, and forensic investigators who need to inspect `.php`, `.asp`, `.html`, `.jsp`, and similar files for signs of compromise — without requiring internet access or installation.
 
 ---
 
@@ -21,72 +21,73 @@ This tool is built for SOC analysts, incident responders, and forensic investiga
 
 ## Project Structure
 
-```
-
-YARA\_STANDALONE/
-├── input/webroot/                # Drop target files here
+```text
+YARA_STANDALONE/
+├── input/
+│   └── webroot/              # Files to scan go here
 ├── modules/
-│   ├── yara\_standalone.exe       # Standalone executable
-│   ├── yara\_standalone.py        # (Optional) Source code
-│   └── yara\_webshell\_rules/      # YARA rule files
-├── template/                     # HTML report templates
-├── reports/                      # Output reports
-└── run\_yara\_scan.bat             # Windows launcher
-
+│   ├── yara_standalone.exe   # Standalone executable
+│   ├── yara_standalone.py    # (Optional) Source code
+│   └── yara_webshell_rules/  # YARA rule files
+├── template/                 # HTML report templates
+├── reports/                  # Output reports (auto-generated)
+└── run_yara_scan.bat         # Launcher script
 ````
 
 ---
 
 ## Rule Management
 
-You can customize detection logic by modifying the `.yar` rule files in:  
+You can customize detection by modifying the rule files in:
 `modules/yara_webshell_rules/`
 
-- Add your own `.yar` files to extend detection.
-- Remove or update existing rules as needed.
+* Add your own `.yar` files to enhance or adapt detection logic
+* Remove or edit existing rules as needed
 
-> No rebuild is required — the scanner will dynamically load all `.yar` files on each run.
+> ✅ No rebuild is required — the scanner will dynamically load all `.yar` files in that folder at runtime.
 
 ---
 
 ## Output
 
-The tool generates the following reports in the `reports/` folder:
+The scanner generates two types of reports for each scan, stored in the `reports` folder:
 
-- **HTML Report** - A styled, grouped summary of rule matches with metadata.
-- **Text Report** - A plain-text version for terminal review or log archiving.
+* **HTML Report** – A styled, grouped report showing matched YARA rules and metadata.
+* **Text Report** – A plain-text version suitable for terminal viewing or logging.
 
-Reports are timestamped and do not overwrite previous results.
+All reports are timestamped and won't overwrite previous results.
 
 ---
 
 ## Optional: Running from Source
 
-If you'd prefer to run the tool using Python:
+If you'd rather run the scanner using Python:
 
 ```bash
 cd modules
 python yara_standalone.py
-````
+```
 
-> Requires Python 3 and the following packages:
-> `yara-python`, `jinja2`, `colorama`
+Requirements (if using Python):
+
+```
+pip install yara-python jinja2 colorama
+```
 
 ---
 
 ## Optional: Rebuilding the Executable
 
-If you make code changes and want to rebuild the `.exe`:
+If you modify the script and want to rebuild the `.exe`:
 
 ```bash
 pyinstaller --onefile modules/yara_standalone.py --name yara_standalone
 ```
 
-> Do not bundle the `input`, `template`, `reports`, or `yara_webshell_rules` folders — they are accessed from disk.
+> Do **not** bundle the `input`, `template`, `reports`, or `yara_webshell_rules` folders — these are read from disk at runtime.
 
 ---
 
 ## License
 
-This project is released under the MIT License.
-
+This project is licensed under the MIT License.
