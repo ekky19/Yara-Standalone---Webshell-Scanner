@@ -33,7 +33,6 @@ YARA_STANDALONE/
 └── run_yara_scan.bat         # Launcher script
 
 
-
 ---
 
 ## Rule Management
